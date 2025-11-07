@@ -14,6 +14,9 @@ const Login = ({ onSubmit }) => {
     }
 
     onSubmit({ email, password })
+    setEmail('')
+    setPassword('')
+    setError('')
   }
 
   return (

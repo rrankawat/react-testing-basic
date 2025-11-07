@@ -17,12 +17,13 @@ test('Submit form data correctly', async () => {
   const handleSubmit = jest.fn()
   render(<Feedback onSubmit={handleSubmit} />)
 
-  await userEvent.type(screen.getByLabelText(/name/i), 'John Doe')
-  await userEvent.type(
-    screen.getByLabelText(/feedback/i),
-    'Hi, It was a great service!'
-  )
-  await userEvent.selectOptions(screen.getByLabelText(/rating/i), '5')
+  const name = screen.getByLabelText(/name/i)
+  const feedback = screen.getByLabelText(/feedback/i)
+  const rating = screen.getByLabelText(/rating/i)
+
+  await userEvent.type(name, 'John Doe')
+  await userEvent.type(feedback, 'Hi, It was a great service!')
+  await userEvent.selectOptions(rating, '5')
   await userEvent.click(
     screen.getByRole('button', { name: /submit feedback/i })
   )
@@ -33,4 +34,7 @@ test('Submit form data correctly', async () => {
     feedback: 'Hi, It was a great service!',
     rating: '5',
   })
+  expect(name).toHaveValue('')
+  expect(feedback).toHaveValue('')
+  expect(rating).toHaveValue('')
 })

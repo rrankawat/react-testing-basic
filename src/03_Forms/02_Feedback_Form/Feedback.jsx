@@ -6,13 +6,19 @@ const Feedback = ({ onSubmit }) => {
   const [rating, setRating] = useState('')
   const [error, setError] = useState('')
 
-  const handleSubmit = () => {
+  const handleSubmit = e => {
+    e.preventDefault()
+
     if (!name || !feedback || !rating) {
       setError('All fields are required!')
       return
     }
 
     onSubmit({ name, feedback, rating })
+    setName('')
+    setFeedback('')
+    setRating('')
+    setError('')
   }
 
   return (
@@ -45,6 +51,7 @@ const Feedback = ({ onSubmit }) => {
         value={rating}
         onChange={e => setRating(e.target.value)}
       >
+        <option value=''>select</option>
         <option value='1'>1</option>
         <option value='2'>2</option>
         <option value='3'>3</option>

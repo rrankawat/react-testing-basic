@@ -1,70 +1,54 @@
-# Getting Started with Create React App
+## 🧪 React Testing Library + Jest Learning Roadmap
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+### 🏁 **Phase 1 – Foundations**
 
-## Available Scripts
+**Goal:** Understand how to write and run basic component tests.
+**Topics:**
 
-In the project directory, you can run:
+1. ✅ _Setting up Jest and React Testing Library_
+2. ✅ _Testing Components (Rendering, Queries, Assertions, Interactions)_ ← **Start here**
+3. 🧱 _Testing props, conditional rendering, and event handlers_
 
-### `npm start`
+---
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### 🌐 **Phase 2 – Mocking and API Testing**
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+**Goal:** Learn how to test components that depend on external data.
+**Topics:** 4. Mocking API calls (`fetch`, `axios`) using `jest.mock()` 5. Testing async behavior (`findBy`, `waitFor`, `mockResolvedValue`)
 
-### `npm test`
+---
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### 📝 **Phase 3 – Forms and Inputs**
 
-### `npm run build`
+**Goal:** Learn to simulate user input and validate behavior.
+**Topics:** 6. Testing forms (typing, submitting, validation, reset, etc.) 7. Mocking form submission handlers
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+---
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### ⚙️ **Phase 4 – State and Context**
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+**Goal:** Test components that use global state or context.
+**Topics:** 8. Testing Context API 9. Testing Redux or Zustand stores 10. Using custom render helpers (wrapping with providers)
 
-### `npm run eject`
+---
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### 🔐 **Phase 5 – Authentication**
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+**Goal:** Learn how to test protected components or login flows.
+**Topics:** 11. Mocking authentication hooks (e.g., Firebase, Auth0, custom hooks) 12. Testing redirects for logged-in vs logged-out users
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+---
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+### 🧭 **Phase 6 – Routing**
 
-## Learn More
+**Goal:** Verify navigation and route-based rendering.
+**Topics:** 13. Testing `react-router-dom` components (Link, Navigate, useNavigate) 14. Mocking navigation + testing route transitions
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+---
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### 🧰 **Phase 7 – Best Practices**
 
-### Code Splitting
+**Goal:** Build confidence in test structure and coverage.
+**Topics:** 15. Writing clean and maintainable test code 16. Testing accessibility and performance hints 17. Debugging failed tests efficiently
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+---
